@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+header {
+    width: 100%;
+}
+
+input {
+    margin: 40px auto;
+    border-radius: 3px;
+    height: 24px;
+    font-size: 16px;
+    padding: 20px 10px;
+    width: 35%;
+    border: 1px solid rgb(197, 197, 197);
+    color: rgb(197, 197, 197);
+    transition: all .2s ease-in-out;
+}
+
+input:hover,
+input:focus {
+    color: rgb(51, 51, 51);
+    background-color: rgb(240, 240, 240);
+}
+
+a {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.image-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.image-container img {
+    margin-bottom: 30px;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    transition: all .2s ease-in-out;
+    opacity: .85;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    border: 2px solid rgb(51, 51, 51);
+}
+
+/* LIGHTBOX CSS OVERRIDE */
+.lightbox .lb-image {
+    border: none;
+    border-radius: 0;
+}
+
+
+a.lb-close,
+.lb-data .lb-close {
+    display: none;
+}
+
+.lb-nav a.lb-prev,
+.lb-nav a.lb-next {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+.lb-nav a.lb-prev:hover,
+.lb-nav a.lb-next:hover {
+    transform: scale(1.02);
+}
+
+.lb-nav {
+    width: 130%;
+    left: -100px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.lb-nav img {
+    width: 20%;
+}
+
+.lb-data .lb-details {
+    text-align: center;
+}
+
+.lb-data .lb-caption {
+    font-size: 14px;
+}
+
+.lb-dataContainer {
+    padding-top: 50px;
+}
+/* --------------------- */
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+    .image-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 925px;
+    }
+}
