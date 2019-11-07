@@ -17,18 +17,12 @@ $search.keyup(function () {
 
     //Search through <a> and check data-title
     $('a').each(function () {
-        //if filter is not empty, compare userInput to dataTitle's
-        //else, show all images 
-        if (userInput !== '') {
-            //Temporary store 'data-title' to compare 
-            let dataTitle = $(this).attr('data-title').toLowerCase();
-            if (dataTitle.indexOf(userInput) !== -1) {
-                $(this).show();
-            } else {
-                $(this).fadeOut(600);
-            }
-        } else {
+        //Temporary store 'data-title' to compare 
+        let dataTitle = $(this).attr('data-title').toLowerCase();
+        if (dataTitle.search(userInput) > -1) {
             $(this).show();
+        } else {
+            $(this).fadeOut(600);
         }
     });
 });

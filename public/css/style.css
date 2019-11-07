@@ -37,7 +37,8 @@ a {
 .image-container {
     margin-left: auto;
     margin-right: auto;
-    width: 55%;
+    width: 75%;
+    max-width: 950px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -49,12 +50,16 @@ a {
     background-repeat: repeat-x;
     transition: all .2s ease-in-out;
     opacity: .85;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .image-container img:hover {
     transform: scale(1.1);
     opacity: 1;
-    border: 2px solid rgb(51, 51, 51);
+    /* border: 2px solid rgb(51, 51, 51); */
+    position: relative;
+    z-index: 1;
 }
 
 /* LIGHTBOX CSS OVERRIDE */
@@ -63,11 +68,6 @@ a {
     border-radius: 0;
 }
 
-
-a.lb-close,
-.lb-data .lb-close {
-    display: none;
-}
 
 .lb-nav a.lb-prev,
 .lb-nav a.lb-next {
@@ -105,10 +105,12 @@ a.lb-close,
 /* --------------------- */
 
 /* MEDIA QUERIES */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+
     .image-container {
+        width: 85%;
         margin-left: auto;
         margin-right: auto;
-        max-width: 925px;
+        justify-content: space-between;
     }
 }
